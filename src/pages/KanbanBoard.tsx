@@ -13,25 +13,19 @@ const KanbanBoard = () => {
   }
 
   return (
-    <div className="flex  gap-2">
-      <div className="flex  gap-2">
+    <div className="flex  gap-2 flex-col md:flex-row justify-start items-start flex-wrap">
+      <div className="flex  gap-2 flex-wrap">
         {columns.map((data, key) => (
-          <div
-            key={key}
-            className="flex flex-row justify-center items-center text-white bg-black border-zinc-500 cursor-pointer ring-rose-500 hover:ring-2 rounded-lg m-auto  w-[350px] min-w-[350px] h-[60px] gap-2"
-          >
-            {data}
-          </div>
+          <Column key={key} col={data} />
         ))}
       </div>
       <div
-        className="flex flex-row justify-center items-center text-white bg-zinc-900 border-zinc-500 cursor-pointer ring-rose-500 hover:ring-2 rounded-lg m-auto  w-[350px] min-w-[350px] h-[60px] gap-2"
+        className="flex flex-row justify-center items-center text-white bg-zinc-900 border-zinc-500 cursor-pointer ring-rose-500 hover:ring-2 rounded-lg m-auto  min-w-72 h-[50px] gap-2"
         onClick={createNewColumn}
       >
         <CiCirclePlus className="" />
         <button>Add Column</button>
       </div>
-      <Column />
     </div>
   );
 };
