@@ -42,7 +42,7 @@ const Column = ({ col, onDelete }: ColumnDetails) => {
           >
             <textarea
               placeholder={taskName}
-              className="w-full p-2 text-white rounded-md bg-zinc-800 outline-none scrollbar-hide"
+              className="w-full p-2 text-white rounded-md resize-none py-2 bg-zinc-800 outline-none scrollbar-hide"
               rows={2}
             />
             {hoveredTaskIndex === index && (

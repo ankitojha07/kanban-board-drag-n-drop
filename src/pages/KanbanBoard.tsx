@@ -5,7 +5,6 @@ import Column from "../components/Column";
 const KanbanBoard = () => {
   const [columns, setColumns] = useState<string[]>([]);
 
-  // Create a new column
   function createNewColumn() {
     setColumns((prevColumns) => [
       ...prevColumns,
@@ -13,7 +12,6 @@ const KanbanBoard = () => {
     ]);
   }
 
-  // Delete a column by its name
   function deleteColumn(columnName: string) {
     setColumns((prevColumns) =>
       prevColumns.filter((col) => col !== columnName)
