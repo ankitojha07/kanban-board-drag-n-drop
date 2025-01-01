@@ -25,7 +25,12 @@ const Column = ({ col, onDelete }: ColumnDetails) => {
         <p className="py-1 bg-zinc-900 rounded-full px-3 font-bold">
           {task.length}
         </p>
-        <p className="text-start w-full px-2 font-bold">Column {col}</p>
+        {/* <p className="text-start w-full px-2 font-bold">Column {col}</p> */}
+        <input
+          type="text"
+          className="text-start w-full px-2 font-bold bg-transparent border rounded-full"
+          placeholder={col}
+        />
         <MdDelete
           className="text-2xl cursor-pointer"
           onClick={() => onDelete(col)}
